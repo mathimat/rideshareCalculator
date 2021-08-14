@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node",
-    "dev": "nodemon --ignore public"
+    "dev": "nodemon --ignore public --exec \"npm run scss\"",
+    "scss": "node-sass --watch sass -o ./public/styles"
   },
   "keywords": [
     "Calculator",
@@ -18,7 +19,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
-    "materialize-css": "^1.0.0-rc.2",
+    "node-sass": "^6.0.1",
     "vue": "^3.2.2"
   },
   "devDependencies": {

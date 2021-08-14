@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root {
     --prussian-blue-darker: #002c42;
     --prussian-blue: #003049ff;
@@ -47,12 +51,8 @@ h1{
 
 #content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-}
-
-#content .result{
-    
 }
 
 
@@ -77,6 +77,29 @@ hr.topDivider {
     border-top: 1px solid;
     border-color: var(--orange);
 }
+
+
+.input-data {
+    font-size: 1.5rem;
+    position: relative;
+    border: solid 1px #ccc;
+    padding: 0 1rem;
+}
+.input-data input {
+    border:none;
+    outline: 0;
+    width: 80%;
+    font-size: 1.5rem;
+    padding: 1rem 0 1rem;
+
+}
+.input-data label {
+    position: absolute;
+    font-size: 1rem;
+    transform: translate(0,1rem) scale(1);
+}
+
+
 
 footer {
     margin-top:auto;

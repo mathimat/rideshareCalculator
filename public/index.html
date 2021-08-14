@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Cost Calculator</title>
-
-    <link rel="stylesheet" href="styles/index.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!-- <link type="text/css" rel="stylesheet" href="styles/index.css"> -->
     <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
@@ -16,38 +16,12 @@
         </div>
         <hr class="topDivider">
         <div id="content">
-            <h2 class="header">Fill in data</h2>
-            <div class="input-data">
-                <label>Kilometer Driven</label>
-                <input type="number">
-            </div>
-            <div class="input-data">
-                <label>Passengers</label>
-                <input type="number">
-            </div>
-            <h3>Car data</h3>
-            <div class="input-data">
-                <label>Wh/km</label>
-                <input type="number">
-            </div>
-            <div class="input-data">
-                <label>price pr kWh</label>
-                <input type="number">
-            </div>
-            <div class="input-data">
-                <label>marginal costs</label>
-                <input type="number">
-            </div>
-            <div class="input-data">
-                <label>parking</label>
-                <input type="number">
-            </div>
-            <div class="input-data">
-                <label>Toll</label>
-                <input type="number">
-            </div>
-            <h3 class="result">Resulut: {{result}} driver included</h3>
-        </div>
+            <input-field v-for="field in fields"
+                :key="field.field"
+                :label="field.label"
+                :tooltip="field.tooltip"
+                ></input-field>
+       </div>
     </div>
     <footer>
         <div id="foot-left"></div>
